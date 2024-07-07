@@ -45,11 +45,11 @@
           testDockerManifest = self'.legacyPackages.mkDockerManifest {
             github = {
               enable = true;
-              repo = "mirkolenz/flocken";
-              actor = "mirkolenz";
-              token = "";
+              repo = "cameronraysmith/flocken";
+              actor = "cameronraysmith";
+              token = "$GH_TOKEN";
             };
-            branch = "main";
+            branch = "crane-tag";
             version = "1.0.0";
             images = with self.packages; [x86_64-linux.dummyDocker];
           };
