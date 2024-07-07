@@ -3,11 +3,15 @@ on:
     branches:
       - main
       - crane-tag
+
 jobs:
   test:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      packages: write
+      attestations: write
+      id-token: write
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
